@@ -73,6 +73,6 @@ items.forEach(item => listElement.append(createItem(item)));
 formElement.addEventListener('submit', (evt) => {
 	evt.preventDefault();
 	listElement.prepend(createItem(inputElement.value));
-	saveTasks(getTasksFromDOM);
+	saveTasks(getTasksFromDOM());
 	inputElement.value = '';
 });
